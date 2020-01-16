@@ -1,0 +1,425 @@
+/*START OF BASIC STYLING*/
+/*hieronder staat alle styling die zorgde voor de basic layout van de website met als uitgaanspunt dat het werkt op een scherm van een smartphone*/
+
+
+/*CODE voor hamburger menu van Carlijn Bruin*/
+/*.burger div{
+    width: 25px;
+    height: 6px;
+    background-color: gray;
+    margin: 5px;
+}
+
+.burger{
+    position: absolute;
+    top: 1.3 em;
+    right: 1em;
+}
+
+.linkjes{
+    padding-top: 0.5em;
+    width: 100vw;
+    transition: opacity 1.2s ease-out;
+    opacity: 0;
+    text-align: center;
+}
+
+.linkjes > *{
+    font-size: 1.5em;
+    border bottom: 1px solid lightgray;
+    padding: 0.7em 0em 0.7em 0em;
+    margin: -10em;
+    transition: 0.8s ease-out;
+}
+
+.linkjes.show-search{
+    opacity: 1;
+    background-color: white;]
+}
+
+.linkjes.show-search > *{
+    margin: 0;
+}
+*/
+
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: rgb(0,0,20);
+    color: rgb(220,240,255);
+}
+
+main {
+    width: 100vw;
+}
+
+section { 
+    padding: 4em; /*dan blijft de tekst niet aan de zijkanten plakken*/
+}
+
+article {
+    width: 100%;
+    padding: 0em 0em 8em 0em;
+}
+
+img {
+    width: 100%;
+    box-shadow: 0em 0em 1em rgb(0,0,100);
+}
+
+h1, h2, h3, h4, legend {
+    /*nu hebben alle kopjes dezelfde stijl in een keer*/
+    font-family: fantasy;
+    color: rgb(0,160,240);
+    text-shadow: 0em 0em .3em rgb(0,0,250);
+    margin: 0;
+}
+
+h1 {
+    font-size: 2em;
+    padding: 1em 1em 2em 1em;
+}
+
+h2 {
+    font-size: 2em;
+    padding: 0em 0em .5em 0em;
+}
+
+#thestory {
+    padding: 0em 1em;
+}
+
+p {
+    font-family: sans-serif;
+    letter-spacing: .3px;
+    line-height: 25px; /*nu is de tekst makkelijker leesbaar*/
+    width: 100%;
+}
+
+.quote {
+    font-family: cursive;
+    margin: 0;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    font-family: sans-serif;
+    text-decoration: none;
+}
+
+footer {
+    background-image: linear-gradient(rgb(0,0,20), rgb(0,0,0));
+    /*footer heeft een gradient*/
+}
+
+footer a {
+    color: rgb(220,240,255);
+}
+/*END OF BASIC STYLING*/
+
+
+
+
+
+
+/*START OF NAV*/
+header {
+    background-color: rgb(0,0,20); 
+    position: sticky;
+    top: 0;
+    height: 9em;
+    margin: 0em 0em 3em 0em;
+}
+
+header a {
+    font-size: 1.2em;
+    font-family: fantasy;
+    color: rgb(0,160,240);
+    text-shadow: 0em 0em .3em rgb(0,0,250);
+}
+
+header div {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /*wrap zodat het logo en het menu icoon onder elkaar zitten (omdat het logo de gehele ruimte in beslag neemt)*/
+}
+
+nav {
+    display: flex;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    box-shadow: 0em 1em 1em rgb(0,0,20);
+    background-color: rgb(0,0,20);
+
+    /*transform: translate(0px, -300px); /*transform laat je de container in 2D posities veranderen. translate gebruik je om de (x- en y-as) positie te veranderen*/
+}
+
+nav li {
+    padding: 1em;
+}
+
+#menu img{
+    width: 2em;
+    margin: 0 50%;
+}
+
+#menu2 img{
+    width: 2em;
+    margin: 0 -50%;
+    visibility: hidden;
+}
+
+#logo {
+    font-size: 2em;
+    margin: 0 100%;
+}
+
+#currentpage {
+    text-decoration: underline;
+}
+
+.toon {
+    margin-top: 0em;
+}
+/*END OF NAV*/
+
+
+
+
+
+
+/*START FORM STYLING*/
+form {
+    padding: 10%;
+}
+
+legend {
+    font-size: 1.5em
+}
+
+textarea {
+    width: 100%;
+    height: 10em;
+    background-color: rgb(200,230,250);
+}
+
+textarea:focus {
+    box-shadow: 0em 0em 5em rgb(0,250,200);
+}
+
+fieldset {
+    display: flex;
+    justify-content: center;
+    border: none;
+}
+
+label {
+    padding: 2em;
+    background-color: rgb(40,60,80);
+}
+
+label p {
+    margin: 0;
+}
+
+label img {
+    box-shadow: none;
+    width: 30px;
+}
+
+#required {
+    font-size: .6em;
+    margin: 2em 0 0;
+    color: rgb(255,200,0);
+    text-shadow: 0em 0em .5em rgb(255,200,0);
+}
+/*END FORM STYLING*/
+
+
+
+
+
+
+/*EXTRA'S*/
+#thestory p:hover {
+    letter-spacing: 4px;
+    transition: .5s;
+}
+
+a:focus, input:focus, textarea:focus {
+    outline-color: rgb(0,250,200);; /*de lijn gaat weg bron: https://a11yproject.com/posts/never-remove-css-outlines/*/
+    box-shadow: 0em 0em 2em rgb(0,250,200);
+}
+/*EXTRA'S*/
+
+
+
+
+
+
+/*MEDIAQUERIES*/
+@media (min-width: 40em) {
+    
+    nav ul {
+        font-size: 1.2em;
+    }
+    /*maakt de navigatie font groter*/
+    
+    main {
+        padding: 2em 0em 0em 0em;
+    }
+    /*omdat de navigatie groter is, moet de main een stukje naar beneden*/
+    
+    section {
+        padding: 5em;
+    }
+    /*je krijgt meer ruimte tussen de tekst en de rand, zodat 1 regel tekst niet te lang wordt*/
+}
+
+@media (min-width: 51em) {
+    
+    section {
+        padding: 8em;
+    }
+    
+    header li {
+    letter-spacing: 0px;
+    transition: .5s;
+}
+    
+    header li:hover {
+    letter-spacing: 2px;
+}
+    
+}
+
+@media (min-width: 60em) {
+    
+    /*de navigatie wordt naast elkaar gezet*/
+    
+    nav ul {
+        font-size: 1.2em;
+        box-shadow: none;
+        justify-content: flex-end;
+    }
+    
+    .toggle {
+        visibility: hidden;
+    }
+        
+    header {
+        display: flex;
+        align-items: baseline;
+        height: 5em;
+        box-shadow: 0em 1em 1em rgb(0,0,20);
+    }
+    
+    nav {
+        width: 100%;
+    }
+    
+    header div {
+        align-self: flex-start;
+    }
+    
+    #logo {
+        position: relative;
+        top: 5px  
+    }
+}
+
+@media (min-width: 80em) {
+    
+    main {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    section {
+        padding: 3em;
+    }
+    
+    footer {
+        padding: 5em;
+    }
+    
+    .TOSmain {
+        display: block;
+        width: 100%;
+    }
+    
+    .TOSmain  article p {
+        width: 50%;
+        margin: 5% 25%;
+    }
+    
+    form p {
+        padding: 1em 0em 1em 0em;
+        font-size: 1.4;
+    }
+    
+    article h3 {
+        background-color: rgb(0,0,20);
+        position: sticky;
+        top: 4em;
+        padding: 1.5em 0em;
+        box-shadow: 0em 0em 0em .2em rgb(0,0,20);
+        /*kopjes scrollen mee zodat je weet waar je bent*/
+    }
+    
+    header {
+        z-index: 3;
+    }
+    
+}
+/*MEDIAQUERIES*/
+
+
+
+
+
+
+
+/*JAVASCRIPT*/
+body.bright {
+    background-color: rgb(0,160,240);
+    color: rgb(0,0,20);
+    text-shadow: 0em 0em 0em 1em rgb(0,0,20);
+}
+/*JAVASCRIPT*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
